@@ -3,25 +3,37 @@
   "version": "1.0.0",
   "description": "Creating a weather forecast site using the weather API .",
   "main": "index.js",
-  "dependencies": {
-    "bootstrap": "^4.5.3"
-  },
   "devDependencies": {
+    "autoprefixer": "^10.0.4",
     "babel-eslint": "^10.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
+    "exports-loader": "^1.1.1",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^7.0.1",
+    "node-sass": "^5.0.0",
+    "postcss-loader": "^4.1.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.17.2",
-    "webpack": "^5.5.0",
+    "webpack": "^5.8.0",
     "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch-build": "webpack --watch"
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
