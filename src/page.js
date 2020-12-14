@@ -1,3 +1,12 @@
+// const component = () => {
+//   const element = document.createElement("div");
+//   element.innerHTML = "<h1>Weather App</h1>";
+//   element.classList.add("text-center", "text-warning", "font-weight-bold");
+
+//   return element;
+// };
+
+// document.body.appendChild(component());
 const container = () => {
   const pageTitle = document.createElement("div");
   pageTitle.classList.add("h1");
