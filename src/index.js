@@ -1,26 +1,27 @@
 import "bootstrap";
 import "./scss/app.scss";
 import "./css/style.css";
+import container from "./page";
 
-function component() {
-  const element = document.createElement("div");
+// const component = () => {
+//   const element = document.createElement("div");
+//   element.innerHTML = "<h1>Weather App</h1>";
+//   element.classList.add("text-center", "text-warning", "font-weight-bold");
 
-  // Lodash, currently included via a script, is required for this line to work
-  // element.innerText = "Hello webpack";
-  element.innerHTML = "<h1>Weather App</h1>";
-  element.classList.add("text-center", "text-warning", "font-weight-bold");
+//   return element;
+// };
 
-  return element;
-}
+// document.body.appendChild(component());
 
-document.body.appendChild(component());
+// showCityForm; input
+// submitCityFromForm;  (button) -> returns cityData
+// showWeatherInCity;   function(cityData->temp, feelsLike, humidity, pressure)
+// showWeatherTable();
 
-// 1.function for location
+//Celcius/Farenheit(temp)
+// let celcius = (temp-32)*( 5 / 9);
 
-// const setLocation = () => {};
-// 5591105db82a0e4b34df846e33599b1a
-//  http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=1111111111
-
+// const apiKey = "5591105db82a0e4b34df846e33599b1a";
 function cityData(cityName) {
   return fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=5591105db82a0e4b34df846e33599b1a`,
@@ -30,3 +31,4 @@ function cityData(cityName) {
     .then((data) => console.log(data));
 }
 cityData("London");
+container();

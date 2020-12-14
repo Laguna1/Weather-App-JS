@@ -1,3 +1,4 @@
-.hello {
-    color: red;
+.form-group,
+.search-result {
+    border: 2px solid lightcoral;
 }
