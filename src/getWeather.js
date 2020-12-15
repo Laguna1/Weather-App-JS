@@ -6,7 +6,7 @@ const locationElement = document.querySelector('.location p');
 const weather = {};
 
 weather.temperature = {
-  unit: 'celsius',
+  unit: 'celsius'
 };
 
 const KELVIN = 273;
@@ -49,13 +49,13 @@ function getWeather(cityName) {
 
 
   function celsiusToFahrenheit(temperature) {
-    return (temperature * 9) / 5 + 32;
+    return  (temperature * 9) / 5 + 32;
   }
 
 
   tempElement.addEventListener('click', () => {
-    if (weather.temperature.value === undefined) return;
-
+    if (weather.temperature.value === undefined) { return };
+    
     if (weather.temperature.unit === 'celsius') {
       let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
       fahrenheit = Math.floor(fahrenheit);
@@ -68,6 +68,6 @@ function getWeather(cityName) {
       weather.temperature.unit = 'celsius';
     }
   });
-}
+};
 
 export default getWeather;
