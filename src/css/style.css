@@ -4,7 +4,7 @@ body {
     background-size: cover;
 }
 
-.form-group,
-.search-result {
-    border: 2px solid lightcoral;
+#search-input,
+.weather-container  {
+    border: 3px solid #FFC107;
 }
