@@ -1,3 +1,9 @@
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2013/08/06/05/27/clouds-170135_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .form-group,
 .search-result {
     border: 2px solid lightcoral;

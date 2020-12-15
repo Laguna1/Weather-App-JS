@@ -1,45 +1,24 @@
-// const component = () => {
-//   const element = document.createElement("div");
-//   element.innerHTML = "<h1>Weather App</h1>";
-//   element.classList.add("text-center", "text-warning", "font-weight-bold");
+import getWeather from './getWeather';
 
-//   return element;
-// };
-
-// document.body.appendChild(component());
-const container = () => {
-  const pageTitle = document.createElement("div");
-  pageTitle.classList.add("h1");
-  pageTitle.innerText = "Weather App";
-
-  const formGroup = document.createElement("div");
-  formGroup.classList.add("form-group");
-
-  const label = document.createElement("label");
-  label.innerText = "City: ";
-  const searchInput = document.createElement("input");
-  searchInput.classList.add("search-input");
-  searchInput.required = "true";
-  searchInput.placeholder = "Enter city name";
-
-  formGroup.appendChild(label);
-  formGroup.appendChild(searchInput);
-
-  const searchResult = document.createElement("div");
-  searchResult.classList.add("result");
-  searchResult.innerHtml = `<h4>Today in:</h4>
-    <p>"cityName"</p>
-    <p><span>temp 00</span></p>
-    <p><span>feels like 00</span></p>
-    <p><span>humidity 00</span></p>
-    <p><span>pressure  00</span></p>`;
-
-  container.appendChild(pageTitle);
-  container.appendChild(formGroup);
-  container.appendChild(searchResult);
-
-  const showContentDiv = document.querySelector("#content");
-  showContentDiv.appendChild(container);
+const submitForm = () => {
+    const cityName = document.getElementById('search-input').value;
+    getWeather(cityName);
 };
 
-export default container;
+const component = () => {
+    const element = document.createElement('div');
+    const pageTitle = document.createElement('h1');
+    pageTitle.innerText = 'Weather App';
+    element.classList.add('text-center', 'text-warning', 'font-weight-bold');
+    const searchInput = document.createElement('input');
+    searchInput.placeholder = 'Enter city name';
+    searchInput.id = 'search-input';
+    const submitInput = document.createElement('button');
+    submitInput.classList.add('btn', 'btn-warning', 'text-white');
+    submitInput.innerText = 'Get Weather';
+    submitInput.onclick = submitForm;
+    element.append(pageTitle, searchInput, submitInput);
+    return element;
+};
+
+export default component;
