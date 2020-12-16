@@ -14,7 +14,7 @@ Creating a weather forecast site using the weather API . The user is able to sea
 
 ## Live Demo
 
-[Live demo](https://laguna1.github.io/Weather-App-JS/)
+[Live demo](https://raw.githack.com/Laguna1/Weather-App-JS/weather-branch/dist/index.html)
 
 
 ## Installation and Usage
