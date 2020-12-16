@@ -53,7 +53,7 @@ function getWeather(cityName) {
   }
 
 
-  tempElement.addEventListener('click', () => {
+  tempElement.addEventListener('mouseover', () => {
     if (weather.temperature.value === undefined) { return; }
 
     if (weather.temperature.unit === 'celsius') {
@@ -61,12 +61,12 @@ function getWeather(cityName) {
       fahrenheit = Math.floor(fahrenheit);
       tempElement.innerHTML = `${fahrenheit}°  <span>F</span>`;
       weather.temperature.unit = 'fahrenheit';
-    } else {
+   } else {
       tempElement.innerHTML = `${
         weather.temperature.value
       } °  <span>C</span>`;
       weather.temperature.unit = 'celsius';
-    }
+   }
   });
 }
 

@@ -8,3 +8,8 @@ body {
 .weather-container {
   border: 3px solid #ffc107;
 }
+
+.temperature-value {
+  cursor: pointer;
+  color: greenyellow;
+}
